@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Well Ease</title>
+    <!-- Google Maps JavaScript API -->
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBojPd6EiAeB6gA6-VDz2meSDR6CNDFmYE&callback=initMap&libraries=places&v=weekly" 
+        async 
+        defer>
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <!-- Header section with title -->
+    <header>
+      <h1>Well Ease</h1>
+    </header>
+
+    <!-- Main content section -->
+    <div id="content">
+      <!-- Search input and button -->
+      <div id="search-container">
+        <input 
+          type="text" 
+          id="searchBox" 
+          placeholder="Search for a clinic..." 
+          class="search-input"
+        />
+        <button id="searchBtn" class="search-button">Search</button>
+      </div>
+
+      <!-- Clinic type filter dropdown -->
+      <div id="clinic-filter">
+        <label for="clinicType">Choose a clinic type:</label>
+        <select id="clinicType">
+          <option value="hospital">Hospital</option>
+          <option value="doctor">Doctor</option>
+          <option value="dentist">Dentist</option>
+          <option value="pharmacy">Pharmacy</option>
+        </select>
+      </div>
+
+      <!-- Map container -->
+      <div id="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

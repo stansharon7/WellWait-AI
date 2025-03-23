@@ -1,0 +1,208 @@
+/* Basic body styling */
+body {
+    font-family: Helvetica, sans-serif;  /* Set font for the page */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+    background-color: #f8f8f8;  /* Set background color */
+}
+
+/* Main container for layout */
+.container {
+    display: flex;  /* Use flexbox for layout */
+    min-height: 100vh;  /* Make the container take up the full viewport height */
+    border: 10px solid #69D0FF;  /* Blue border around the container */
+    padding-left: 20px;  /* Add space between the border and content */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 400px;  /* Set sidebar width */
+    background: rgb(226, 234, 238);  /* Set background to white */
+    padding: 20px;  /* Add padding inside the sidebar */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);  /* Add subtle shadow on the right */
+    overflow-y: auto;  /* Allow scrolling if content overflows vertically */
+    position: relative;  /* Enable absolute positioning for elements within */
+}
+
+/* Styling for the input field */
+#location-input {
+    padding: 8px 12px;  /* Padding inside the input */
+    font-size: 16px;  /* Font size for the text */
+    border-radius: 5px;  /* Rounded corners */
+    border: 1px solid #ccc;  /* Light border color */
+    width: 250px;  /* Set a fixed width for the input */
+    margin-right: 10px;  /* Add space between input and button */
+}
+
+/* Styling for the submit button */
+#submit-location {
+    background-color: #007bff;  /* Blue background */
+    color: white;  /* White text color */
+    border: none;  /* Remove border */
+    padding: 8px 15px;  /* Padding inside the button */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+    font-size: 16px;  /* Font size */
+}
+
+/* Hover effect for the submit button */
+#submit-location:hover {
+    background-color: rgb(43, 145, 255);  /* Lighter blue on hover */
+    color: white;  /* Keep text color white */
+}
+
+/* Styling for heading */
+h2 {
+    margin-top: 30px;  /* Add space above the heading */
+    margin-bottom: 10px;  /* Add space below the heading */
+}
+
+/* Header section layout */
+.header {
+    display: flex;  /* Use flexbox for layout */
+    justify-content: space-between;  /* Space items evenly across the container */
+    align-items: center;  /* Vertically center align the items */
+    margin-bottom: 5px;  /* Reduce space below the header */
+}
+
+/* Edit location button */
+.submit-location {
+    background-color: #007bff;  /* Blue background for the button */
+    color: white;  /* White text color */
+    border: none;  /* Remove border */
+    padding: 6px 10px;  /* Padding inside the button */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+    font-size: 14px;  /* Set font size */
+    position: absolute;  /* Position absolutely within the sidebar */
+    top: 25px;  /* Distance from the top */
+    right: 20px;  /* Distance from the right */
+}
+
+.submit-location:hover{
+    background-color: rgb(43, 145, 255); 
+    color: #ffffff;
+}
+
+/* Styling for the filters section */
+.filters {
+    margin-top: 10px;  /* Space above the filters */
+    display: flex;  /* Use flexbox to align items horizontally */
+    justify-content: flex-start;  /* Align the items to the left */
+    align-items: center;  /* Vertically center the items */
+}
+
+/* Styling for the span elements inside .filters */
+.filters span {
+    display: flex;  /* Use flexbox for each filter item */
+    align-items: center;  /* Vertically center the icon and text */
+    margin-right: 87px;  /* Reduced space between the filter items */
+}
+
+/* Styling for the list container */
+.list-container {
+    margin-top: 20px;  /* Add space above the list */
+    overflow-y: auto;  /* Allow scrolling if content overflows vertically */
+    max-height: 80vh;  /* Limit the height of the list container */
+    padding-right: 10px;  /* Add space on the right side for scrollbar */
+}
+
+/* Individual location card styling */
+.location-card {
+    display: flex;  /* Use flexbox for layout */
+    align-items: center;  /* Vertically center align the content */
+    background: #fff;  /* Set background color to white */
+    padding: 20px;  /* Padding inside the card */
+    border-radius: 10px;  /* Rounded corners */
+    margin-bottom: 15px;  /* Add space below each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+    height: 100px;  /* Fixed height for the card */
+}
+
+/* Styling for the number circle */
+.number {
+    font-size: 22px;  /* Set font size */
+    font-weight: bold;  /* Make the number bold */
+    background: #007bff;  /* Set background to blue */
+    color: white;  /* White text color */
+    border-radius: 50%;  /* Make it a circle */
+    width: 50px;  /* Set width */
+    height: 50px;  /* Set height */
+    display: flex;  /* Use flexbox for layout */
+    align-items: center;  /* Vertically center the number */
+    justify-content: center;  /* Horizontally center the number */
+    margin-right: 20px;  /* Add space between number and details */
+}
+
+/* Styling for the location details */
+.details h3 {
+    margin: 0;  /* Remove default margin */
+    font-size: 18px;  /* Set font size */
+}
+
+.details p {
+    margin: 5px 0;  /* Add space between paragraphs */
+    color: gray;  /* Set text color to gray */
+    font-size: 14px;  /* Set font size */
+}
+
+.timing {
+    margin-top: 10px;  /* Add space above the timing section */
+}
+
+/* Styling for timing information */
+.timing span {
+    display: inline-block;  /* Align each timing information inline */
+    margin-right: 15px;  /* Add space between each timing */
+    font-size: 16px;  /* Set font size */
+    
+}
+
+/* Icon styling (car and clock) */
+.icon {
+    width: 20px;  /* Adjust the size of the icons */
+    height: 20px;  /* Adjust the size of the icons */
+    margin-right: 8px;  /* Space between the icon and text */
+    vertical-align: middle;  /* Align the icon vertically with the text */
+}
+
+/* Styling for the horizontal line between filters and location cards */
+hr.divider {
+    margin-top: 20px;  /* Add space above the line */
+    border: 1px solid #ccc;  /* Set the line color */
+    width: 100%;  /* Make the line span the full width */
+} 
+
+#map {
+    flex: 1;
+    height: 100vh;
+    border: 2px solid rgb(0, 119, 255); /* Debugging border */
+}
+
+
+
+/*Google places API key: AIzaSyAiAmWzCFVbnP0eDFpjGL7Qd0g4YFLntXA*/
+
+
+/*function createLocationCard(location) {
+    return `
+        <div class="location-card">
+            <div class="number">${location.number}</div>
+            <div class="details">
+                <h3>${location.name}</h3>
+                <p>${location.address}</p>
+                <div class="timing">
+                    <span><img src="assets/car-icon.webp" alt="Car icon" class="icon"> ${location.travel}</span>
+                    <span><img src="assets/clock-icon-lg.png" alt="Time icon" class="icon"> ${location.wait}</span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderLocations() {
+    const listContainer = document.getElementById("locations-list");
+    listContainer.innerHTML = locations.map(createLocationCard).join("\n");
+}
+
+document.addEventListener("DOMContentLoaded", renderLocations);*/
