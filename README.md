@@ -1,9 +1,11 @@
 :bulb: **INSPIRATION**:
+<br> 
 
-:hospital: Do you just ever get **tired** and **frustrated** of the long wait times you have when you go to a walk in clinic? I'm assuming you do and that's why we created WellWait! 
+:hospital: Do you just ever get **tired** and **frustrated** of the long wait times :clock5: you have when you go to a walk in clinic? I'm assuming you do and that's why we created WellWait! 
 
-The idea stemmed from a repeated problem I personally experienced of having to wait at walk in clinics when I needed help at a particular time instead of having to rely on future 
-appointments to go.
+The idea stemmed from a repeated problem I personally experienced of having to wait at walk in clinics when I needed help at a particular time instead of having to rely on future appointments to go.
+
+<br>
 
 **WHAT WELLWAIT DOES**: 
 
@@ -11,10 +13,19 @@ Wellwait is a webapp that tells you the wait times as well as the time to reach 
 (wait time + time to get there by car) will be placed at the top with them chronologically being listed as the times increase. This just saves you a whole lot of time and 
 instead of going to a clinic where you'll have a long wait time, you can directly go to one where you'll have to wat for less. Isn't that *amazing* ?! 
 
+<br> 
+
 **HOW IT WORKS**:
 
+:arrow_right:
 
+:arrow_right:
 
+:arrow_right:
+
+:arrow_right:
+
+<br>
 
 **THE CHALLENGES WE FACED**:
 
@@ -25,6 +36,9 @@ Watching it just running for a day felt like a bucket of cold water was poured a
 
 :high_brightness: Finding actual datasets from clinics on the number of visits they've had each day from the past few years 
 
+:high_brightness: Connecting together all the different parts everyone worked on
+
+<br> 
 
 **OUR ACCOMPLISHMENTS**:
 
@@ -36,6 +50,7 @@ Watching it just running for a day felt like a bucket of cold water was poured a
 
 :star: Collaborated in a way that *each member* of our team had something they could input towards 
 
+<br>
 
 **WHAT'S IN STORE FOR US NEXT**:
 
@@ -43,6 +58,7 @@ We want to be able to get real data from the past on the number of visits the cl
 you'll have currently and in the future. 
 
 
+<br>
 
 **OUR BUILDING BLOCKS**:
 
