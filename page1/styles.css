@@ -178,3 +178,23 @@ hr.divider {
     border: 2px solid rgb(0, 119, 255); /* Debugging border */
 }
 
+.directions-btn {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.directions-btn:hover {
+    background-color: #0056b3;
+}
+
+.directions-btn img.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}

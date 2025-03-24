@@ -20,7 +20,7 @@ const hospitals = [
     { number: 2, name: "King Street Medical Centre", address: "1718 King St E", travel: "20 minutes"},
     { number: 3, name: "University Help Centre", address: "200 University Ave W", travel: "25 minutes"},
     { number: 4, name: "Park 535 Medical Centre", address: "535 Park St Unit 2", travel: "10 minutes"},
-    { number: 5, name: "Benton Medical Centre", address: "51 Benton St", travel: "25 minutes"}
+    { number: 5, name: "Benton Medical Centre", address: "51 Benton St", travel: "12 minutes"}
 ];
 
 let locations = [];
@@ -185,6 +185,12 @@ submitBtn.addEventListener('click', async () => {
 //Sharon's code here
 //<div class="number"> ${location.number}</div>
 function createLocationCard(location) {
+    // Fixed user location
+    const userLocation = "57 Albert St, Waterloo, ON";
+    
+    // Construct the Google Maps directions URL for the clinic
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(userLocation)}&destination=${encodeURIComponent(location.address)}&destination_place_id=${encodeURIComponent(location.placeId)}`;
+
     return `
         <div class="location-card">
             <div class="details">
@@ -194,6 +200,12 @@ function createLocationCard(location) {
                     <span><img src="assets/car-icon.webp" alt="Car icon" class="icon"> <strong>Travel Time:</strong> ${location.travelTime && !location.travelTime.includes("minutes") ? location.travelTime + " minutes" : location.travelTime || "Calculating..."}</span>
                     <span><img src="assets/clock-icon-lg.png" alt="Time icon" class="icon"> <strong>Wait Time:</strong> ${location.predictTime && !location.predictTime.includes("minutes") ? location.predictTime + " minutes" : location.predictTime || "Calculating..."}</span>
                 </div>
+            </div>
+            <div class="actions">
+                <!-- Get Directions button -->
+                <a href="${directionsUrl}" target="_blank" class="directions-btn">
+                    <img src="assets/direction-512.webp" alt="Directions Icon" class="icon"> Directions
+                </a>
             </div>
         </div>
     `;
