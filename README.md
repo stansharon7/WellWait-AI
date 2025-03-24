@@ -3,7 +3,7 @@
 
 :hospital: Do you just ever get **tired** and **frustrated** of the long wait times :clock5: you have when you go to a walk in clinic? I'm assuming you do and that's why we created WellWait! 
 
-The idea stemmed from a repeated problem I personally experienced of having to wait at walk in clinics when I needed help at a particular time instead of having to rely on future appointments to go.
+The idea stemmed from a repeated problem we personally experienced of having to wait at walk in clinics when we needed help at a particular time instead of having to rely on future appointments to go.
 
 <br>
 
@@ -11,19 +11,19 @@ The idea stemmed from a repeated problem I personally experienced of having to w
 
 Wellwait is a webapp that tells you the wait times as well as the time to reach the clinics around you after you give it your location. The one with the least sum 
 (wait time + time to get there by car) will be placed at the top with them chronologically being listed as the times increase. This just saves you a whole lot of time and 
-instead of going to a clinic where you'll have a long wait time, you can directly go to one where you'll have to wat for less. Isn't that *amazing* ?! 
+instead of going to a clinic where you'll have a long wait time, you can directly go to one where you'll have to wait for less. Isn't that *amazing* ?! 
 
 <br> 
 
 **HOW IT WORKS**:
 
-:arrow_right:
+:arrow_right: We created dummy past data about clinics and sent that to Nebius API, which returned predicted wait times. 
 
-:arrow_right:
+:arrow_right: This data was then stored into a list of objects which was then sorted to give the least wait time first, followed by the rest sequentially. 
 
-:arrow_right:
+:arrow_right: The Google Maps JavaScript API allows us to display interactive maps, while the Google Places API enables users to search for and discover relevant locations like clinics
 
-:arrow_right:
+:arrow_right: The Google Geocoding API helps us convert addresses into geographic coordinates, making it easier to locate and display clinics on the map.
 
 <br>
 
@@ -36,7 +36,7 @@ Watching it just running for a day felt like a bucket of cold water was poured a
 
 :high_brightness: Finding actual datasets from clinics on the number of visits they've had each day from the past few years 
 
-:high_brightness: Connecting together all the different parts everyone worked on
+:high_brightness: Integrating together all the different parts everyone worked on
 
 <br> 
 
@@ -46,9 +46,11 @@ Watching it just running for a day felt like a bucket of cold water was poured a
 
 :star: Were able to implement a *functioning* idea into our project
 
-:star: Learnt how to use a Google API key
+:star: Learnt how to use a Google API key as well as Nebius AI API 
 
 :star: Collaborated in a way that *each member* of our team had something they could input towards 
+
+:star: Figured out solutions to various problems we faced despite being unfamiliar with most of the technologies used
 
 <br>
 
@@ -62,8 +64,14 @@ you'll have currently and in the future.
 
 **OUR BUILDING BLOCKS**:
 
-:white_check_mark: CSS
-
 :white_check_mark: HTML
 
+:white_check_mark: CSS
+
+:white_check_mark: Javascript
+
 :white_check_mark: Node.js 
+
+:white_check_mark: Nebius AI studio API 
+
+:white_check_mark: Google maps API 
