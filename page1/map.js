@@ -33,42 +33,40 @@ function initMap() {
         // Show all location cards
         document.getElementById("locations-list").style.display = "block";
 
+        // Manually add markers for each location with fixed latitudes and longitudes
+        const locations = [
+            { name: "Waterloo Walk-in-Clinic", lat: 43.47214619157909, lng: -80.53902531900451 },
+            { name: "King Street Medical Centre", lat: 43.483506505297456, lng: -80.5259174636284 },
+            { name: "University Help Centre", lat: 43.469551463538394, lng: -80.54370898566026 },
+            { name: "Park 535 Medical Centre", lat: 43.45651245334418, lng: -80.51558424660361 },
+            { name: "Benton Medical Centre", lat: 43.44775491685125, lng: -80.48863506656221}
+        ];
+
         locations.forEach(location => {
-            // Append location card
+            // Append location card (you can modify this part as needed)
             document.getElementById("locations-list").innerHTML += createLocationCard(location);
 
-            // Add marker for each clinic
+            // Add marker for each clinic with custom icon (marker.png)
             const marker = new google.maps.Marker({
                 position: { lat: location.lat, lng: location.lng },
                 map: map,
-                icon: `assets/marker${location.number}.png`, 
+                icon: {
+                    url: 'assets/marker.png',  // Custom marker icon from assets
+                    scaledSize: new google.maps.Size(30, 40), // Set the marker size (width, height)
+                },
                 title: location.name,
             });
 
+            // Store the marker in the markers array
             markers.push(marker);
         });
 
-        // Add "You Are Here" marker when search is submitted
+        // Add the "You Are Here" marker (user's location)
         userMarker = new google.maps.Marker({
             position: userLocation,
             map: map,
             icon: "assets/You-here.png", // Custom "You Are Here" marker icon
             title: "You Are Here",
         });
-
-        // Center map on the user's location
-        map.setCenter(userLocation);
-        map.setZoom(12);
-    });
-
-    // Allow pressing "Enter" to submit the input
-    document.getElementById("location-input").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            document.getElementById("submit-location").click();
-        }
     });
 }
-
-// Ensure initMap is called when the script loads
-window.initMap = initMap;

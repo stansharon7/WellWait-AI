@@ -11,7 +11,6 @@ body {
     display: flex;  /* Use flexbox for layout */
     min-height: 100vh;  /* Make the container take up the full viewport height */
     border: 10px solid #69D0FF;  /* Blue border around the container */
-    padding-left: 20px;  /* Add space between the border and content */
 }
 
 /* Sidebar styling */
@@ -179,30 +178,3 @@ hr.divider {
     border: 2px solid rgb(0, 119, 255); /* Debugging border */
 }
 
-
-
-/*Google places API key: AIzaSyAiAmWzCFVbnP0eDFpjGL7Qd0g4YFLntXA*/
-
-
-/*function createLocationCard(location) {
-    return `
-        <div class="location-card">
-            <div class="number">${location.number}</div>
-            <div class="details">
-                <h3>${location.name}</h3>
-                <p>${location.address}</p>
-                <div class="timing">
-                    <span><img src="assets/car-icon.webp" alt="Car icon" class="icon"> ${location.travel}</span>
-                    <span><img src="assets/clock-icon-lg.png" alt="Time icon" class="icon"> ${location.wait}</span>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-function renderLocations() {
-    const listContainer = document.getElementById("locations-list");
-    listContainer.innerHTML = locations.map(createLocationCard).join("\n");
-}
-
-document.addEventListener("DOMContentLoaded", renderLocations);*/
