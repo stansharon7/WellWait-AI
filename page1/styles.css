@@ -154,7 +154,7 @@ h2 {
     display: inline-block;  /* Align each timing information inline */
     margin-right: 15px;  /* Add space between each timing */
     font-size: 16px;  /* Set font size */
-    
+    margin-bottom: 5px;  /* Add a little space below each timing */
 }
 
 /* Icon styling (car and clock) */

@@ -142,18 +142,27 @@ const { day, time } = getCurrentDateTime();
 async function processHospitals() {
     const promises = fakeData.map(async (hospital) => {
         const predictedWaitTime = await getWaitTime(hospital.name, hospital.city, day, time, hospital.pastWaitTimes);
-        console.log(predictedWaitTime);
         const extractedTime = predictedWaitTime.match(/\d+/g)?.pop() || "N/A";
-        return { number:hospital.number, hospitalName: hospital.name, travelTime: hospital.travelTime, address:hospital.address, predictTime: extractedTime, day: day, time: time };
+        return {
+            number: hospital.number,
+            hospitalName: hospital.name, 
+            travelTime: hospital.travelTime, 
+            address: hospital.address, 
+            predictTime: extractedTime, 
+            day: day, 
+            time: time
+        };
     });
 
     try {
         locations = await Promise.all(promises);
         console.log(locations);
+        renderLocations(); // Update UI after fetching data
     } catch (error) {
         console.error("Error processing hospitals:", error);
     }
 }
+
 
 function getTimeInMinutes(timeString) {
     return parseInt(timeString.split(' ')[0], 10); // Extracts the number part from the string
@@ -178,13 +187,12 @@ submitBtn.addEventListener('click', async () => {
 function createLocationCard(location) {
     return `
         <div class="location-card">
-            
             <div class="details">
-                <h3>${location.hospitalName}</h3>
-                <p>${location.address}</p>
+                <h3>${location.hospitalName || "Loading..."}</h3>
+                <p>${location.address || "Loading..."}</p>
                 <div class="timing">
-                    <span><img src="assets/car-icon.webp" alt="Car icon" class="icon"> ${location.travelTime}</span>
-                    <span><img src="assets/clock-icon-lg.png" alt="Time icon" class="icon"> ${location.predictTime} minutes</span>
+                    <span><img src="assets/car-icon.webp" alt="Car icon" class="icon"> <strong>Travel Time:</strong> ${location.travelTime && !location.travelTime.includes("minutes") ? location.travelTime + " minutes" : location.travelTime || "Calculating..."}</span>
+                    <span><img src="assets/clock-icon-lg.png" alt="Time icon" class="icon"> <strong>Wait Time:</strong> ${location.predictTime && !location.predictTime.includes("minutes") ? location.predictTime + " minutes" : location.predictTime || "Calculating..."}</span>
                 </div>
             </div>
         </div>
